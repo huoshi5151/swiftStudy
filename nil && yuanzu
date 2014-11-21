@@ -1,0 +1,52 @@
+// Playground - noun: a place where people can play
+//两种声明可选型的方法
+var roundValue:Int?
+
+var roundValue1:Optional<Int>
+
+println("The round value is \(roundValue?.description)")
+
+println("The round value1 is \(roundValue1?.description)")
+
+//避免因为使用值为nil的对象导致的程序异常
+var optionalValue:Optional<Int>
+
+if var maxValue = optionalValue{
+    
+    maxValue += 1
+    
+    println("The convert Value is \(maxValue)")
+}
+
+//!用于表示隐式解析可选
+let nullValue:String!="Not Null String"
+
+println(nullValue)
+
+//两个?
+var doubleOptionalValue:Int??
+
+//a ?? b 
+//当a为nil的时候返回b的值，当a不为nil的时候，返回a的值
+var succedCreateClass:Int? = 2
+
+var feedBack = 1
+
+var returnValue = succedCreateClass ?? feedBack
+
+println(returnValue)
+
+//################################# 元组
+
+//声明一个匿名元祖
+let (appType,appName) = ("game","2048")
+
+//可以使用上面的元素名来访问其元素的值
+println("I have \(appType),it's name is \(appName)")
+
+//一个标准的元组可以在声明的时候指定元祖名称，元素名称并且初始化
+let myProject = (oneElement:"game",twoElement:"2048")
+//可以使用元素名访问元组中的元素，也可以使用元素所在位置的下标来访问其中的元素，从0开始
+println(myProject.oneElement)
+println(myProject.1)
+
